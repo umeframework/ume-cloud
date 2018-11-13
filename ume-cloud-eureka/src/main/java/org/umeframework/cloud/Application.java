@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 /**
  * Eureka server for doraframework cloud
  * 
- * @author Yue MA
+ * @author UME team
  */
 @SpringBootApplication
 @EnableEurekaServer

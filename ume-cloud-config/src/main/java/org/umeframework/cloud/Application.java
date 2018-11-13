@@ -4,9 +4,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
- * Eureka server for doraframework cloud
+ * Cloud config server for umeframework.<br>
  * 
- * @author Yue MA
+ * @author UME team
  */
 @SpringBootApplication
 @EnableConfigServer
