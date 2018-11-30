@@ -33,3 +33,4 @@ dependency-reduced-pom.xml
 .svn/
 .git/
 /log//h2/
+/log/
