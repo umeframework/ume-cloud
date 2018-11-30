@@ -2,7 +2,7 @@
 <Configuration status="debug">
     <Properties>
         <Property name="log.path">log</Property>
-        <Property name="log.name">ume-cloud-eureka</Property>
+        <Property name="log.name">ume-cloud-gateway</Property>
     </Properties>
 	<Appenders>
         <Console name="consoleAppender" target="SYSTEM_OUT" follow="true">

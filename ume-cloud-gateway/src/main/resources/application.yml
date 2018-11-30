@@ -1,0 +1,37 @@
+logging:
+  config: classpath:log4j2.xml
+server:
+  port: 27070
+spring:
+  application: 
+    name: ume-gateway
+  boot:
+    admin:
+      client:
+        enabled: true
+        url: http://localhost:47070
+#  cloud:
+#    gateway:
+#      routes:
+#      - id: route01
+#        uri: http://localhost:8081
+#        predicates:
+#        - Path=/a/**
+#        filters:
+#        - StripPrefix=1
+#      - id: route01
+#        uri: http://localhost:8082
+#        predicates:
+#        - Path=/b/**
+#        filters:
+#        - StripPrefix=1
+
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 15
+    lease-renewal-interval-in-seconds: 5
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url.defaultZone: http://localhost:17070/eureka/
+
+

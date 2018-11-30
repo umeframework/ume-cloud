@@ -1,31 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
+<Configuration status="debug">
+    <Properties>
+        <Property name="log.path">log</Property>
+        <Property name="log.name">ume-cloud-eureka</Property>
+    </Properties>
 	<Appenders>
-		<Console name="Console" target="SYSTEM_OUT" follow="true">
-			<PatternLayout>
-                <pattern>%u,%d{yyyyMMdd.HH:mm:ss.SSS},%p,%X{RID},%X{TID},%c{1}, %m%n</pattern>
-			</PatternLayout>
-		</Console>
-        <RollingFile 
-                name="RollingFile" 
-                fileName="log/ume-cloud-eureka.log" 
-                filePattern="log/$${date:yyyy-MM}/ume-cloud-eureka-%d{MMdd}-%i.log">
+        <Console name="consoleAppender" target="SYSTEM_OUT" follow="true">
             <PatternLayout>
-                <pattern>%u,%d{yyyyMMdd.HH:mm:ss.SSS},%p,%X{RID},%X{TID},%c{1}, %m%n</pattern>
+                <pattern>%u,%d{yyyyMMdd.HH:mm:ss.SSS},%5p,%c{1},%X{thread},%X{system},%X{service},%X{client},%X{user}, %m%n</pattern>
             </PatternLayout>
-            <SizeBasedTriggeringPolicy size="20MB"/>
+        </Console>
+        <RollingFile name="fileAppender" fileName="${log.path}/${log.name}.log" filePattern="${log.path}/${date:yyyy-MM}/${log.name}-%d{yyyyMMdd}-%i.log">
+            <PatternLayout>
+                <pattern>%u,%d{yyyyMMdd.HH:mm:ss.SSS},%5p,%c{1},%X{thread},%X{system},%X{service},%X{client},%X{user}, %m%n</pattern>
+            </PatternLayout>
+            <SizeBasedTriggeringPolicy size="128MB"/>
         </RollingFile>
-
+        <RollingFile name="errorAppender" fileName="${log.path}/${log.name}-err.log" filePattern="${log.path}/${date:yyyy-MM}/${log.name}-err-%d{yyyyMMdd}-%i.log">
+            <PatternLayout>
+                <pattern>%u,%d{yyyyMMdd.HH:mm:ss.SSS},%5p,%c{1},%X{thread},%X{system},%X{service},%X{client},%X{user}, %m%n</pattern>
+            </PatternLayout>
+            <SizeBasedTriggeringPolicy size="128MB"/>
+        </RollingFile>
 	</Appenders>
 	<Loggers>
-		<Logger name="org.apache.catalina.util.LifecycleBase" level="error" />
-		<Logger name="org.apache.coyote.http11.Http11NioProtocol" level="warn" />
-		<Logger name="org.apache.tomcat.util.net.NioSelectorPool" level="warn" />
-		<Logger name="org.hibernate.validator.internal.util.Version" level="warn" />
-		<Logger name="org.springframework" level="info" />
-		<Root level="info">
-			<AppenderRef ref="Console" />
-			<AppenderRef ref="RollingFile" />
-		</Root>
+        <Logger name="org.hibernate.validator" level="error" />
+        <Logger name="org.jboss.logging" level="error" />
+        <Logger name="org.apache.ibatis" level="warn" />
+        <Logger name="org.mybatis.spring" level="warn" />
+        <Logger name="com.netflix" level="warn" />
+        <Logger name="de.codecentric" level="warn" />
+        <Logger name="org.apache.catalina" level="warn" />
+        <Logger name="org.apache.coyote" level="warn" />
+        <Logger name="org.apache.tomcat" level="warn" />
+        <Logger name="org.apache.coyote" level="warn" />
+        <Logger name="org.quartz" level="warn" />
+        <Logger name="org.springframework" level="info" />
+
+        <AsyncLogger name="errorLogger" level="error" includeLocation="true"  additivity="false">
+            <appender-ref ref="errorAppender" />
+        </AsyncLogger>
+        <AsyncRoot level="debug" includeLocation="true">
+            <AppenderRef ref="consoleAppender" />
+            <AppenderRef ref="fileAppender" />
+        </AsyncRoot>	
 	</Loggers>
 </Configuration>
