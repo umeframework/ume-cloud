@@ -34,15 +34,15 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
     
-    @Bean
-    public RouteLocator customizeRouter(RouteLocatorBuilder builder) {
-        StripPrefixGatewayFilterFactory.Config config = new StripPrefixGatewayFilterFactory.Config();
-        config.setParts(1);
-        return builder.routes()
-                .route("host_route", r -> r.path("/a/**").filters(f -> f.stripPrefix(1)).uri("http://localhost:8081"))
-                .route("host_route", r -> r.path("/b/**").filters(f -> f.stripPrefix(1)).uri("http://localhost:8082"))
-                .build();
-    }
+//    @Bean
+//    public RouteLocator customizeRouter(RouteLocatorBuilder builder) {
+//        StripPrefixGatewayFilterFactory.Config config = new StripPrefixGatewayFilterFactory.Config();
+//        config.setParts(1);
+//        return builder.routes()
+//                .route("host_route", r -> r.path("/a/**").filters(f -> f.stripPrefix(1)).uri("http://localhost:8081"))
+//                .route("host_route", r -> r.path("/b/**").filters(f -> f.stripPrefix(1)).uri("http://localhost:8082"))
+//                .build();
+//    }
 
     /**
      * Create RestTemplate instance.<br>

@@ -2,7 +2,7 @@
 <Configuration status="debug">
     <Properties>
         <Property name="log.path">log</Property>
-        <Property name="log.name">ume-cloud-eureka</Property>
+        <Property name="log.name">ume-cloud-config</Property>
     </Properties>
 	<Appenders>
         <Console name="consoleAppender" target="SYSTEM_OUT" follow="true">
@@ -10,18 +10,22 @@
                 <pattern>%u,%d{yyyyMMdd.HH:mm:ss.SSS},%5p,%c{1},%X{thread},%X{system},%X{service},%X{client},%X{user}, %m%n</pattern>
             </PatternLayout>
         </Console>
-        <RollingFile name="fileAppender" fileName="${log.path}/${log.name}.log" filePattern="${log.path}/${date:yyyy-MM}/${log.name}-%d{yyyyMMdd}-%i.log">
+        <RollingFile name="fileAppender" fileName="${log.path}/${log.name}.log" filePattern="${log.path}/${date:yyyy-MM}/${log.name}-%d{yyyyMMdd}.log">
             <PatternLayout>
                 <pattern>%u,%d{yyyyMMdd.HH:mm:ss.SSS},%5p,%c{1},%X{thread},%X{system},%X{service},%X{client},%X{user}, %m%n</pattern>
             </PatternLayout>
-            <SizeBasedTriggeringPolicy size="128MB"/>
+            <Policies>
+    			<TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+    		</Policies>
         </RollingFile>
+        <!-- 
         <RollingFile name="errorAppender" fileName="${log.path}/${log.name}-err.log" filePattern="${log.path}/${date:yyyy-MM}/${log.name}-err-%d{yyyyMMdd}-%i.log">
             <PatternLayout>
                 <pattern>%u,%d{yyyyMMdd.HH:mm:ss.SSS},%5p,%c{1},%X{thread},%X{system},%X{service},%X{client},%X{user}, %m%n</pattern>
             </PatternLayout>
             <SizeBasedTriggeringPolicy size="128MB"/>
         </RollingFile>
+         -->
 	</Appenders>
 	<Loggers>
         <Logger name="org.hibernate.validator" level="error" />
@@ -37,9 +41,11 @@
         <Logger name="org.quartz" level="warn" />
         <Logger name="org.springframework" level="info" />
 
-        <AsyncLogger name="errorLogger" level="error" includeLocation="true"  additivity="false">
+		<!-- 
+        <AsyncLogger name="errorLogger" level="info" includeLocation="true"  additivity="false">
             <appender-ref ref="errorAppender" />
         </AsyncLogger>
+         -->
         <AsyncRoot level="debug" includeLocation="true">
             <AppenderRef ref="consoleAppender" />
             <AppenderRef ref="fileAppender" />

@@ -10,21 +10,21 @@ spring:
       client:
         enabled: true
         url: http://localhost:47070
-#  cloud:
-#    gateway:
-#      routes:
-#      - id: route01
-#        uri: http://localhost:8081
-#        predicates:
-#        - Path=/a/**
-#        filters:
-#        - StripPrefix=1
-#      - id: route01
-#        uri: http://localhost:8082
-#        predicates:
-#        - Path=/b/**
-#        filters:
-#        - StripPrefix=1
+  cloud:
+    gateway:
+      routes:
+      - id: route01
+        uri: http://localhost:8081
+        predicates:
+        - Path=/a/**
+        filters:
+        - StripPrefix=1
+      - id: route01
+        uri: http://localhost:8082
+        predicates:
+        - Path=/b/**
+        filters:
+        - StripPrefix=1
 
 eureka:
   instance:

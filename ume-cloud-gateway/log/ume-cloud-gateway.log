@@ -1,0 +1,169 @@
+689b76e2-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:39.367, INFO,AnnotationConfigApplicationContext,,,,,, Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1795d366: startup date [Fri Dec 14 10:24:39 CST 2018]; root of context hierarchy
+689b76e4-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:39.726, INFO,AutowiredAnnotationBeanPostProcessor,,,,,, JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+68a513d6-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:39.821, INFO,PostProcessorRegistrationDelegate$BeanPostProcessorChecker,,,,,, Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$711e3e73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+69127ba8-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:40.538, INFO,Application,,,,,, No active profile set, falling back to default profiles: default
+6917369a-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:40.569, INFO,AnnotationConfigServletWebServerApplicationContext,,,,,, Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1576597b: startup date [Fri Dec 14 10:24:40 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1795d366
+6da7e24c-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:48.228, INFO,GenericScope,,,,,, BeanFactory id=d49db724-a13f-355f-aae4-e3913a909772
+6dac280e-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:48.256, INFO,AutowiredAnnotationBeanPostProcessor,,,,,, JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+6dcd6bb0-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:48.474, INFO,PostProcessorRegistrationDelegate$BeanPostProcessorChecker,,,,,, Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$55043b76] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+6dd708a2-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:48.537, INFO,PostProcessorRegistrationDelegate$BeanPostProcessorChecker,,,,,, Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$711e3e73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+6e662944-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:49.475, INFO,TomcatWebServer,,,,,, Tomcat initialized with port(s): 27070 (http)
+6ea10f66-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:49.861, INFO,ContextLoader,,,,,, Root WebApplicationContext: initialization completed in 9292 ms
+6ed0d1f8-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:50.174, WARN,URLConfigurationSource,,,,,, No URLs will be polled as dynamic configuration sources.
+6f4369ea-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:50.925,DEBUG,Loggers$LoggerFactory,,,,,, Using Slf4j logging framework
+6f5e6bfc-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.102,DEBUG,InternalLoggerFactory,,,,,, Using SLF4J as the default logging framework
+6f60dcfe-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.118,DEBUG,OpenSsl,,,,,, netty-tcnative not in the classpath; OpenSslEngine will be unavailable.
+6f909f90-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.431,DEBUG,JdkSslContext,,,,,, Default protocols (JDK): [TLSv1.2, TLSv1.1, TLSv1] 
+6f909f92-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.431,DEBUG,JdkSslContext,,,,,, Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+6f958194-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.463,DEBUG,PlatformDependent,,,,,, Platform: Windows
+6f958196-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.463,DEBUG,PlatformDependent0,,,,,, -Dio.netty.noUnsafe: false
+6f958198-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.463,DEBUG,PlatformDependent0,,,,,, Java version: 8
+6f97cb8a-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent0,,,,,, sun.misc.Unsafe.theUnsafe: available
+6f97cb8c-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent0,,,,,, sun.misc.Unsafe.copyMemory: available
+6f97cb8e-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent0,,,,,, java.nio.Buffer.address: available
+6f97cb90-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent0,,,,,, direct buffer constructor: available
+6f97cb92-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent0,,,,,, java.nio.Bits.unaligned: available, true
+6f97cb94-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent0,,,,,, jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+6f97cb96-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent0,,,,,, java.nio.DirectByteBuffer.<init>(long, int): available
+6f97cb98-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent,,,,,, sun.misc.Unsafe: available
+6f97cb9a-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent,,,,,, -Dio.netty.tmpdir: C:\Users\mmayye\AppData\Local\Temp (java.io.tmpdir)
+6f97cb9c-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent,,,,,, -Dio.netty.bitMode: 64 (sun.arch.data.model)
+6f97cb9e-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent,,,,,, -Dio.netty.noPreferDirect: false
+6f97cba0-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent,,,,,, -Dio.netty.maxDirectMemory: 3782737920 bytes
+6f97cba2-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,PlatformDependent,,,,,, -Dio.netty.uninitializedArrayAllocationThreshold: -1
+6f97cba4-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.478,DEBUG,CleanerJava6,,,,,, java.nio.ByteBuffer.cleaner(): available
+6f9c8696-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,ResourceLeakDetector,,,,,, -Dio.netty.leakDetection.level: simple
+6f9c8698-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,ResourceLeakDetector,,,,,, -Dio.netty.leakDetection.targetRecords: 4
+6f9c869a-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.numHeapArenas: 16
+6f9c869c-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.numDirectArenas: 16
+6f9c869e-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.pageSize: 8192
+6f9c86a0-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.maxOrder: 11
+6f9c86a2-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.chunkSize: 16777216
+6f9c86a4-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.tinyCacheSize: 512
+6f9c86a6-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.smallCacheSize: 256
+6f9c86a8-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.normalCacheSize: 64
+6f9c86aa-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+6f9c86ac-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.cacheTrimInterval: 8192
+6f9c86ae-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,PooledByteBufAllocator,,,,,, -Dio.netty.allocator.useCacheForAllThreads: true
+6f9c86b0-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,InternalThreadLocalMap,,,,,, -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+6f9c86b2-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.509,DEBUG,InternalThreadLocalMap,,,,,, -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+6fa168b4-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.541,DEBUG,MultithreadEventLoopGroup,,,,,, -Dio.netty.eventLoopThreads: 16
+6fa623a6-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.572,DEBUG,NioEventLoop,,,,,, -Dio.netty.noKeySetOptimization: false
+6fa623a8-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.572,DEBUG,NioEventLoop,,,,,, -Dio.netty.selectorAutoRebuildThreshold: 512
+6fa894aa-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.588,DEBUG,PlatformDependent,,,,,, org.jctools-core.MpscChunkedArrayQueue: available
+6fd12b4c-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.839,ERROR,TomcatStarter,,,,,, Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'servletEndpointRegistrar' defined in class path resource [org/springframework/boot/actuate/autoconfigure/endpoint/web/ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar]: Factory method 'servletEndpointRegistrar' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'gatewayControllerEndpoint' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$GatewayActuatorConfiguration.class]: Unsatisfied dependency expressed through method 'gatewayControllerEndpoint' parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hystrixGatewayFilterFactory' defined in class path resource [org/springframework/cloud/gateway/config/GatewayAutoConfiguration$HystrixConfiguration.class]: Unsatisfied dependency expressed through method 'hystrixGatewayFilterFactory' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.reactive.DispatcherHandler' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+6fdac83e-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.917, WARN,WebappClassLoaderBase,,,,,, The web application [ROOT] appears to have started a thread named [reactor-http-nio-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+ sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+ io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:737)
+ io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:392)
+ io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+ java.lang.Thread.run(Thread.java:748)
+6fdac840-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.917, WARN,WebappClassLoaderBase,,,,,, The web application [ROOT] appears to have started a thread named [reactor-http-nio-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+ sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+ io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:737)
+ io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:392)
+ io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+ java.lang.Thread.run(Thread.java:748)
+6fdac842-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.917, WARN,WebappClassLoaderBase,,,,,, The web application [ROOT] appears to have started a thread named [reactor-http-nio-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+ sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+ io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:737)
+ io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:392)
+ io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+ java.lang.Thread.run(Thread.java:748)
+6fdac844-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.917, WARN,WebappClassLoaderBase,,,,,, The web application [ROOT] appears to have started a thread named [reactor-http-nio-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+ sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+ io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:737)
+ io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:392)
+ io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+ java.lang.Thread.run(Thread.java:748)
+6fdac846-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.917, WARN,WebappClassLoaderBase,,,,,, The web application [ROOT] appears to have started a thread named [reactor-http-nio-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+ sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+ io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:737)
+ io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:392)
+ io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+ java.lang.Thread.run(Thread.java:748)
+6fdac848-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.917, WARN,WebappClassLoaderBase,,,,,, The web application [ROOT] appears to have started a thread named [reactor-http-nio-6] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+ sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+ io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:737)
+ io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:392)
+ io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+ java.lang.Thread.run(Thread.java:748)
+6fdac84a-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.917, WARN,WebappClassLoaderBase,,,,,, The web application [ROOT] appears to have started a thread named [reactor-http-nio-7] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+ sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+ io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:737)
+ io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:392)
+ io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+ java.lang.Thread.run(Thread.java:748)
+6fdac84c-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.917, WARN,WebappClassLoaderBase,,,,,, The web application [ROOT] appears to have started a thread named [reactor-http-nio-8] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:296)
+ sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(WindowsSelectorImpl.java:278)
+ sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:159)
+ sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+ sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+ io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+ io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:737)
+ io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:392)
+ io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884)
+ java.lang.Thread.run(Thread.java:748)
+6fdac84e-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.917, WARN,AnnotationConfigServletWebServerApplicationContext,,,,,, Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+6fdf8340-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:51.948, INFO,ConditionEvaluationReportLoggingListener,,,,,, 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+709b3222-ff47-11e8-b20d-a0c589f5ccba,20181214.10:24:53.178,ERROR,LoggingFailureAnalysisReporter,,,,,, 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method hystrixGatewayFilterFactory in org.springframework.cloud.gateway.config.GatewayAutoConfiguration$HystrixConfiguration required a bean of type 'org.springframework.web.reactive.DispatcherHandler' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.web.reactive.DispatcherHandler' in your configuration.
+
