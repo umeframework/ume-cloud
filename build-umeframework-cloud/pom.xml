@@ -17,8 +17,8 @@
 
 	<modules>
        <module>../ume-cloud-eureka</module>
-        <module>../ume-cloud-config</module>
-        <module>../ume-cloud-zuul</module>
+       <module>../ume-cloud-config</module>
+       <module>../ume-cloud-zuul</module>
 
 	</modules>
 	
