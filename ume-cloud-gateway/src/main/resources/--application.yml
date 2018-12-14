@@ -34,4 +34,21 @@ eureka:
     registryFetchIntervalSeconds: 5
     service-url.defaultZone: http://localhost:17070/eureka/
 
+management:
+  server:
+    port: 8084
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: \*
+        exclude: env,beans
+    health:
+      show-details: always
+  security: 
+    enabled: false
+
+endpoints:
+  shutdown:
+    enabled: true
 
