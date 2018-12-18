@@ -2,17 +2,60 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+    <properties>
+        <version.dora>2.0.0.RELEASE</version.dora>
+        <version.java>1.8</version.java>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <docker.image.prefix>springcloud</docker.image.prefix>
+		<version.spring.cloud.dependencies>Finchley.SR1</version.spring.cloud.dependencies>
+		<version.spring.boot.admin>2.0.3</version.spring.boot.admin>
+		<version.springloaded>1.2.6.RELEASE</version.springloaded>
+    </properties>
 
 	<groupId>org.umeframework.cloud</groupId>
 	<artifactId>ume-cloud-gateway</artifactId>
 	<packaging>jar</packaging>
-
+	<version>2.0.0.RELEASE</version>
+	
 	<parent>
-		<groupId>org.umeframework</groupId>
-		<artifactId>umeframework-cloud</artifactId>
-		<version>2.0.0.RELEASE</version>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.5.RELEASE</version>
 		<relativePath />
 	</parent>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${version.spring.cloud.dependencies}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>http://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>http://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>	
 
 	<dependencies>
 		<dependency>
@@ -23,6 +66,97 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
+		<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-contract-stub-runner</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                    <groupId>org.springframework.boot</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        
+  		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+ 			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+ 		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
+
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+ 		<dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-actuator</artifactId>
+    	</dependency>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>${version.spring.boot.admin}</version>
+		</dependency>
+
+ 		<dependency>
+			<groupId>org.umeframework.dora</groupId>
+			<artifactId>dora-core</artifactId>
+			<version>${version.dora}</version>
+			<scope>compile</scope>
+			<optional>false</optional>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.hibernate.validator</groupId>
+                    <artifactId>hibernate-validator</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.validation</groupId>
+                    <artifactId>validation-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.umeframework.dora</groupId>
+			<artifactId>dora-orm</artifactId>
+			<version>${version.dora}</version>
+			<scope>compile</scope>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.umeframework.dora</groupId>
+			<artifactId>dora-kvs</artifactId>
+			<version>${version.dora}</version>
+			<scope>compile</scope>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.umeframework.dora</groupId>
+			<artifactId>dora-config</artifactId>
+			<version>${version.dora}</version>
+			<scope>compile</scope>
+			<optional>false</optional>
+		</dependency>
+
 	</dependencies>
 
 </project>
