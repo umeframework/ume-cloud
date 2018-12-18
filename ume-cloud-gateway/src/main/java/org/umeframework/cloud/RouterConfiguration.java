@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @author UME team
  */
 @Configuration
-public class SimpleRoutesConfig {
+public class RouterConfiguration {
 
     /**
      * routeLocators
