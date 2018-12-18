@@ -49,7 +49,12 @@ public class Application {
      */
     @Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
-        return builder.routes().build();
+        RouteLocatorBuilder.Builder rb = builder.routes();
+        
+        rb.route("routeMapping", p -> p.path("/lb/ume-quickstart-cloud/**").filters(f -> f.stripPrefix(1)).uri("lb://UME-QUICKSTART-CLOUD"));
+        rb.route("routeMapping", p -> p.path("/dr/ume-quickstart-cloud/**").filters(f -> f.stripPrefix(1)).uri("http://localhost:8081"));
+        
+        return rb.build();
     }
 
     /**

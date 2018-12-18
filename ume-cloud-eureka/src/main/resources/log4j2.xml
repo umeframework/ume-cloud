@@ -46,7 +46,7 @@
             <appender-ref ref="errorAppender" />
         </AsyncLogger>
          -->
-        <AsyncRoot level="debug" includeLocation="true">
+        <AsyncRoot level="info" includeLocation="true">
             <AppenderRef ref="consoleAppender" />
             <AppenderRef ref="fileAppender" />
         </AsyncRoot>	
