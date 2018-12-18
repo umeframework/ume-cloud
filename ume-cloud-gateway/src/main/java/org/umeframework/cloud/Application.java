@@ -4,15 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.gateway.route.RouteLocator;
-import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.client.RestTemplate;
 import org.umeframework.dora.appconfig.AutoConfigurationBasic;
 import org.umeframework.dora.appconfig.AutoConfigurationDao;
-import org.umeframework.dora.message.MessageProperties;
 
 /**
  * Gateway server for umeframework
@@ -42,22 +39,6 @@ public class Application {
     }
 
     /**
-     * myRoutes
-     * 
-     * @param builder
-     * @return
-     */
-    @Bean
-    public RouteLocator myRoutes(RouteLocatorBuilder builder) {
-        RouteLocatorBuilder.Builder rb = builder.routes();
-        
-        rb.route("routeMapping", p -> p.path("/lb/ume-quickstart-cloud/**").filters(f -> f.stripPrefix(1)).uri("lb://UME-QUICKSTART-CLOUD"));
-        rb.route("routeMapping", p -> p.path("/dr/ume-quickstart-cloud/**").filters(f -> f.stripPrefix(1)).uri("http://localhost:8081"));
-        
-        return rb.build();
-    }
-
-    /**
      * Create RestTemplate instance.<br>
      * 
      * @return
@@ -67,16 +48,4 @@ public class Application {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
-
-    /**
-     * routeMapping
-     * 
-     * @return
-     * @throws Exception
-     */
-    @Bean(name = "routeMapping")
-    public MessageProperties routeMapping() throws Exception {
-        return new org.umeframework.dora.message.impl.MessagePropertiesImpl("routeMapping");
-    }
-
 }
