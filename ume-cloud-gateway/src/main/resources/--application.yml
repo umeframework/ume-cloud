@@ -1,30 +1,25 @@
 logging:
   config: classpath:log4j2.xml
 server:
-  port: 27070
+  port: 18080
 spring:
   application: 
-    name: ume-gateway
-  boot:
-    admin:
-      client:
-        enabled: true
-        url: http://localhost:47070
-  cloud:
+    name: ume-could-gateway
+  cloud: 
     gateway:
       routes:
-      - id: route01
+      - id: defaultRoute
         uri: http://localhost:8081
         predicates:
-        - Path=/a/**
+        - Path=/hp/ume-quickstart-cloud/**
         filters:
-        - StripPrefix=1
-      - id: route01
-        uri: http://localhost:8082
+        - StripPrefix=2
+      - id: defaultRoute
+        uri: lb://UME-QUICKSTART-CLOUD
         predicates:
-        - Path=/b/**
+        - Path=/lb/ume-quickstart-cloud/**
         filters:
-        - StripPrefix=1
+        - StripPrefix=2
 
 eureka:
   instance:
@@ -32,23 +27,22 @@ eureka:
     lease-renewal-interval-in-seconds: 5
   client:
     registryFetchIntervalSeconds: 5
-    service-url.defaultZone: http://localhost:17070/eureka/
+    service-url.defaultZone: http://admin:password@localhost:18089/eureka/
 
-management:
-  server:
-    port: 8084
-  endpoints:
-    web:
-      base-path: /actuator
-      exposure:
-        include: \*
-        exclude: env,beans
-    health:
-      show-details: always
-  security: 
-    enabled: false
-
-endpoints:
-  shutdown:
-    enabled: true
+#management:
+#  server:
+#    port: 18084
+#  endpoints:
+#    web:
+#      base-path: /actuator
+#      exposure:
+#        include: \*
+#        exclude: env,beans
+#    health:
+#      show-details: always
+#  security: 
+#    enabled: false
+#endpoints:
+#  shutdown:
+#    enabled: true
 
